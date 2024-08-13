@@ -4,7 +4,10 @@ import { Meteors } from "../../components/ui/meteors";
 import { Label } from "../../components/ui/label";
 import { Input } from "../../components/ui/input";
 import { cn } from "@/lib/utils";
+import { WavyBackground } from "../../components/ui/wavy-background"
+import Link from "next/link";
 
+import { AnimatedTooltip } from "../../components/ui/animated-tooltip";
 
 
 
@@ -20,13 +23,41 @@ const LabelInputContainer: React.FC<LabelInputContainerProps> = ({ className, ch
 
 
 
-const words = "A third-year engineering student with hands-on experience in full-stack web development. currently honing skills through internships in website design and development.";
+
+const people = [
+  {
+    id: 1,
+    name: "Manoj Jadhav",
+    designation: "Eeletrical Engineer",
+    image:
+      "https://res.cloudinary.com/mudemoenv/image/upload/v1723545941/zp40rlib9qpkbglax89s.jpg",
+  },
+  {
+    id: 2,
+    name: "Omkar jadhav",
+    designation: "Mechanical Engineer",
+    image:
+      "https://res.cloudinary.com/mudemoenv/image/upload/v1723546463/ifujyx8osdty1edzlkg4.jpg",
+  },
+  
+  {
+    id: 3,
+    name: "Jaydip Jadhav",
+    designation: "Software Engineer",
+    image:
+      "https://res.cloudinary.com/mudemoenv/image/upload/v1717221283/njyhut3dg4nmpvnc41g2.jpg",
+  },
+];
+
+
+
+
 
 
  function MeteorsDemo() {
   return (
     // <div className="min-h-screen bg-black py-12 pt-36">
-     <div className=" min-h-screen relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden flex flex-col justify-center items-center">
+     <div className=" min-h-screen relative shadow-xl bg-gray-900 border border-gray-800 py-8 h-full overflow-hidden flex flex-col justify-center items-center">
      {/* <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500"> */}
 
      {/* <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black opacity-50 my-4"> */}
@@ -88,13 +119,15 @@ const words = "A third-year engineering student with hands-on experience in full
           <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
         </LabelInputContainer>
 
-        <button
+       <Link href={"/"}>
+       <button
           className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
           Submit &rarr;
         </button>     
      
+       </Link>
        </div>
    
        
@@ -105,6 +138,24 @@ const words = "A third-year engineering student with hands-on experience in full
 
           
       {/* </div> */}
+
+
+
+      <div className="relative h-[40rem] overflow-hidden flex items-center justify-center w-full">
+        <WavyBackground className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full">
+
+            <h2 className="text-2xl md:text-4xl lg:text-7xl text-white font-bold text-center mb-8">Meet Our Instructors</h2>
+            
+            <p className="text-base md:text-lg text-white text-center mb-4">Discover the professionals who will guide you through advanced editing techniques.</p>
+            
+            <div className="flex flex-row items-center justify-center mb-10 w-full">
+            
+                <AnimatedTooltip items={people}/>
+
+            </div>
+            
+        </WavyBackground>
+    </div>
        </div>
         //  </div>
    
