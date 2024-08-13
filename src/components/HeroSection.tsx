@@ -3,7 +3,6 @@ import { TextGenerateEffect } from "../components/ui/text-generate-effect";
 import { cn } from "@/lib/utils";
 import { Spotlight } from "../components/ui/Spotlight";
 import { Cover } from "@/components/ui/cover";
-import { BackgroundBeams } from "../components/ui/background-beams";
 import { Button } from "../components/ui/moving-border";
 import Link from 'next/link';
 
@@ -11,6 +10,7 @@ import Link from 'next/link';
 const words = " Transform your footage into cinematic experiences with JayEdits. Where creativity meets craftsmanship, and every detail matters.";
 
 const HeroSection = () => {
+  console.log("user is coming on herosection");
   return (
     <div
     className="h-auto md:h-[40rem] w-full rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto py-10 md:py-0"
@@ -49,7 +49,7 @@ const HeroSection = () => {
         
    
         
-        <BackgroundBeams />
+ 
 
     </div>
   )

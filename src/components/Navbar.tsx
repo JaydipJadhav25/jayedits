@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Jayedits from "./Jayedits";
 
 const Nabar = ({ className }: { className?: string }) => {
 
@@ -15,23 +16,33 @@ const Nabar = ({ className }: { className?: string }) => {
           <Menu setActive={setActive}>
               <Link href={"/"}>
               <MenuItem setActive={setActive} active={active} item="Home">
-              
               </MenuItem>
+              
               </Link>
+              <Link href="#features">
+              <MenuItem setActive={setActive} active={active} item="Features"></MenuItem>
+              
+              </Link>
+
+              <Link href="#about">
+              <MenuItem setActive={setActive} active={active} item="About"></MenuItem>
+              
+              </Link>
+              
               <MenuItem
-              setActive={setActive} active={active} item="Our Courses"
+              setActive={setActive} active={active} item="Our services"
               >
                  <div className="flex flex-col space-y-4 text-sm">
-                 <HoveredLink href="/courses">All Courses</HoveredLink>
-              <HoveredLink href="/courses">
-                Basic Music Theory
+                 <HoveredLink href="/services">Services</HoveredLink>
+              <HoveredLink href="/services">
+              Cinematic Editing
               </HoveredLink>
-              <HoveredLink href="/courses">
-                Advanced Composition
+              <HoveredLink href="/services">
+              Basic Editing
               </HoveredLink>
-              <HoveredLink href="/courses">Songwriting</HoveredLink>
-              <HoveredLink href="/courses">
-                Music Production
+              <HoveredLink href="/services">Social Media Content</HoveredLink>
+              <HoveredLink href="/services">
+              Photos & Video Editing
               </HoveredLink>
                  </div>
               </MenuItem>

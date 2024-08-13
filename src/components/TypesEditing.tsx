@@ -12,6 +12,7 @@ const TypesEditing = () => {
         { "text": "Specializations" ,  className: "text-blue-500 dark:text-blue-500", },
      
       ]
+      
 
     const testimonials = [
         {

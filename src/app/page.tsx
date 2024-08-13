@@ -1,5 +1,6 @@
 import CustomVideoPlayer from "@/components/CustomVideoPlayer";
 import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import Jayedits from "@/components/Jayedits";
 import TypesEditing from "@/components/TypesEditing";
@@ -13,8 +14,8 @@ export default function Home() {
        <Features/>
        <TypesEditing/>
        <Jayedits/>
+     
 
-      
 
    </main>
   );

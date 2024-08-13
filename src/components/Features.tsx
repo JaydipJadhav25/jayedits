@@ -3,6 +3,7 @@ import React from 'react'
 import featuresData from "../data/features.json";
 import { HoverEffect } from "../components/ui/card-hover-effect";
 
+
 import { TypewriterEffect } from "../components/ui/typewriter-effect";
 
 
@@ -51,9 +52,10 @@ const Features = () => {
 
 
   return (
-    <div className="max-w-4xl mx-auto px-8">
+    <div className="max-w-4xl mx-auto px-8" id='features'>
        <TypewriterEffect words={texts}/>
     <HoverEffect items={projects} />
+   
   </div>
   )
 }
