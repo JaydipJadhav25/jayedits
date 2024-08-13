@@ -1,6 +1,8 @@
 import CustomVideoPlayer from "@/components/CustomVideoPlayer";
 import Features from "@/components/Features";
 import HeroSection from "@/components/HeroSection";
+import Jayedits from "@/components/Jayedits";
+import TypesEditing from "@/components/TypesEditing";
 import Image from "next/image";
 
 export default function Home() {
@@ -9,6 +11,8 @@ export default function Home() {
        <HeroSection/>
        <CustomVideoPlayer/>
        <Features/>
+       <TypesEditing/>
+       <Jayedits/>
 
       
 

@@ -3,6 +3,9 @@ import React from 'react'
 import featuresData from "../data/features.json";
 import { HoverEffect } from "../components/ui/card-hover-effect";
 
+import { TypewriterEffect } from "../components/ui/typewriter-effect";
+
+
 const Features = () => {
  
   const projects = [
@@ -37,11 +40,19 @@ const Features = () => {
       "link": "/"
     }
   ]
+
+  const texts = [
+    { "text": "Discover" },
+    { "text": "JayEdits" ,  className: "text-blue-500 dark:text-blue-500", },
+    { "text": "Features" }
+  ]
+  
   
 
 
   return (
-    <div className="max-w-5xl mx-auto px-8">
+    <div className="max-w-4xl mx-auto px-8">
+       <TypewriterEffect words={texts}/>
     <HoverEffect items={projects} />
   </div>
   )
